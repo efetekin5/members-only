@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div.formContainer
+    form(method='POST').form
+      label.signUpLabel(for='name') Name
+      input.signUpInput(id='name' type='text')
+
+      label.signUpLabel(for='email') Email
+      input.signUpInput(id='email' type='text')
+
+      label.signUpLabel(for='password') Password
+      input.signUpInput(id='password' type='text')
+
+      label.signUpLabel(for='passwordConfirmation') Password Confirmation
+      input.signUpInput(id='passwordConfirmation' type='text')
+
+      button.signUpButton(type='submit') Sign Up

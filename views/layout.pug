@@ -1,7 +1,26 @@
 doctype html
-html
+html(lang='en')
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/global.css')
   body
+    nav.header 
+        ul.headerElements
+          if user 
+            li 
+                a.membersOnly(href='/')
+                    span.members Members
+                    span.only Only
+            li.logOutElement 
+                button.logOut Log Out
+          else
+            li 
+                a.membersOnly(href='/')
+                    span.members Members
+                    span.only Only
+            li.logInElement 
+                button.logIn Log In 
+            li 
+                button.signUp Sign Up
+
     block content
