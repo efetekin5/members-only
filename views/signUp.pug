@@ -4,15 +4,19 @@ block content
   div.formContainer
     form(method='POST').form
       label.signUpLabel(for='name') Name
-      input.signUpInput(id='name' type='text')
+      input.signUpInput(id='name' type='text' name='name' minLength=1 required value=( name ? name : ''))
 
       label.signUpLabel(for='email') Email
-      input.signUpInput(id='email' type='text')
+      input.signUpInput(id='email' type='email' name='email' required value=( email ? email : ''))
 
       label.signUpLabel(for='password') Password
-      input.signUpInput(id='password' type='text')
+      input.signUpInput(id='password' type='password' name='password' minLength=2 required value=( password ? password : ''))
 
       label.signUpLabel(for='passwordConfirmation') Password Confirmation
-      input.signUpInput(id='passwordConfirmation' type='text')
+      input.signUpInput(id='passwordConfirmation' type='password' name='passwordConfirmation' minLength=2 required  value=( passwordConfirmation ? passwordConfirmation : ''))
 
-      button.signUpButton(type='submit') Sign Up
+      button.formSignUpButton(type='submit') Sign Up
+
+  if errors
+      for error in errors
+        alert #{error.msg}

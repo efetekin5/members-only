@@ -54,7 +54,7 @@
   margin-top: 0.4rem;
 }
 
-.signUp {
+.headerSignUp {
   background-color: rgb(99 102 241);
   color: white;
   margin-right: 3rem;
@@ -65,6 +65,10 @@
   width: 7rem;
   border: 0;
   margin-top: 0.4rem;
+}
+
+.headerSignUp:hover {
+  cursor: pointer;
 }
 
 .logOut {
@@ -103,7 +107,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-.signUpButton {
+.formSignUpButton {
   background-color: rgb(99 102 241);
   color: white;
   padding: 0.8rem;
@@ -113,6 +117,10 @@
   width: 100%;
   border: 0;
   margin-top: 0.7rem;
+}
+
+.formSignUpButton:hover {
+  cursor: pointer;
 }
 
 .signUpInput {
