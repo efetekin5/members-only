@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    div.logInFormContainer 
+        form(method='POST').logInForm
+            label(for='username').logInLabel Username
+            input(type='text' name='username' required).logInInput
+
+            label(for='password').logInLabel Password
+            input(type='text' name='password' required).logInInput
+
+            button(type='submit').logInButton Log In
