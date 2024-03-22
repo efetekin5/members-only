@@ -11,8 +11,9 @@ html(lang='en')
                 a.membersOnly(href='/')
                     span.members Members
                     span.only Only
-            li.logOutElement 
-                button.logOut Log Out
+            li.logOutElement
+                a(href='/log-out')
+                  button.logOut Log Out
           else
             li 
                 a.membersOnly(href='/')
