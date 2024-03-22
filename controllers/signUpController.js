@@ -8,7 +8,7 @@ exports.signUpGet = asyncHandler(async (req, res, next) => {
 })
 
 exports.signUpPost = [
-    body('userName')
+    body('username')
         .trim()
         .isLength({min: 1})
         .escape(),
@@ -29,7 +29,7 @@ exports.signUpPost = [
     asyncHandler( (req, res, next) => {
         const errors = validationResult(req);
 
-        const userName = req.body.userName;
+        const username = req.body.username;
         const email = req.body.email;
         const password = req.body.password;
         const passwordConfirmation = req.body.passwordConfirmation;
@@ -38,7 +38,7 @@ exports.signUpPost = [
         if(!errors.isEmpty()) {
             console.log(errors.errors)
             res.render('signUp', {
-                userName: userName,
+                username: username,
                 email: email,
                 password: password,
                 passwordConfirmation: passwordConfirmation,
@@ -51,7 +51,7 @@ exports.signUpPost = [
                 }
 
                 const newUser = new User({
-                    userName: userName,
+                    username: username,
                     email: email,
                     password: hashedPassword,
                     membershipStatus: membershipStatus,

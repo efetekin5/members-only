@@ -6,7 +6,7 @@ html(lang='en')
   body
     nav.header 
         ul.headerElements
-          if user 
+          if currentUser 
             li 
                 a.membersOnly(href='/')
                     span.members Members
@@ -24,5 +24,6 @@ html(lang='en')
             li 
                 a(href='/sign-up')
                   button.headerSignUp Sign Up
+            
 
     block content

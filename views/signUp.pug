@@ -3,8 +3,8 @@ extends layout
 block content
   div.formContainer
     form(method='POST').form
-      label.signUpLabel(for='userName') Username
-      input.signUpInput(id='userName' type='text' userName='userName' minLength=1 required value=( userName ? userName : ''))
+      label.signUpLabel(for='username') Username
+      input.signUpInput(id='username' type='text' name='username' minLength=1 required value=( username ? username : ''))
 
       label.signUpLabel(for='email') Email
       input.signUpInput(id='email' type='email' name='email' required value=( email ? email : ''))
@@ -19,4 +19,4 @@ block content
 
   if errors
       for error in errors
-        alert #{error.msg}
+        p #{error.msg}

@@ -1,7 +1,10 @@
-require('dotenv').config()
+require('dotenv').config();
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
@@ -30,6 +33,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: process.env.secret,
+  resave: false,
+  saveUninitialized: true,
+  store: MongoStore.create({mongoUrl: process.env.connectionString})
+}));
+
+require('./config/passport');
+
+app.use(passport.session());
+
+app.use((req, res, next) => {
+  res.locals.currentUser = req.user;
+  next();
+});
 
 app.use('/', indexRouter);
 app.use('/sign-up', signUpRouter);
