@@ -7,10 +7,13 @@ html(lang='en')
     nav.header 
         ul.headerElements
           if currentUser 
-            li 
-                a.membersOnly(href='/')
-                    span.members Members
-                    span.only Only
+            li
+              a.membersOnly(href='/')
+                  span.members Members
+                  span.only Only
+            li.newMessageItem
+              a(href='/message')
+                button.newMessage New Message
             li.logOutElement
                 a(href='/log-out')
                   button.logOut Log Out

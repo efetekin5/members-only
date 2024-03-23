@@ -1,8 +1,14 @@
 extends layout
 
 block content
-  h1= title
   if currentUser
-    p Welcome to #{title} #{currentUser.username}
+    div.gridContainer
+      h1.messagesHeader Messages
+      div.grid
+
   else
-    p Welcome to #{title}
+    div.gridContainer
+      h1.messagesHeader Messages
+      div.grid
+        
+

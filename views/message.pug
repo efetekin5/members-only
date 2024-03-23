@@ -1,0 +1,12 @@
+extends layout 
+
+block content
+    div.messageFormContainer
+        form(method='POST').newMessageForm
+            label.messageLabel(for='title') Title
+            input.titleInput(id='title' type='text' name='title' minLength=1 required value=( title ? title : ''))
+
+            label.messageLabel(for='message') Message
+            textarea.messageInput(id='message' name='message' required value=( message ? message : ''))
+
+            button.newMessageSubmitButton(type='submit') Submit
