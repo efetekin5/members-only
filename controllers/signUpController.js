@@ -36,7 +36,6 @@ exports.signUpPost = [
         const membershipStatus = false;
 
         if(!errors.isEmpty()) {
-            console.log(errors.errors)
             res.render('signUp', {
                 username: username,
                 email: email,
