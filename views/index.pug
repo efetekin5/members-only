@@ -2,13 +2,28 @@ extends layout
 
 block content
   if currentUser
-    div.gridContainer
+    div.messagesHeaderContainer
       h1.messagesHeader Messages
-      div.grid
+    div.messagesContainer
+      for message in allMessages 
+        div.messageContainer
+          h5.messageTitle #{message.title}
+          p.message #{message.message}
+          hr
+          p.writtenBy
+            span(style='color: #6b7280') by 
+            | #{message.user.username}
+          p.messageTime #{message.timeStamp}
 
   else
-    div.gridContainer
+    div.messagesHeaderContainer
       h1.messagesHeader Messages
-      div.grid
+    div.messagesContainer
+      for message in allMessages 
+        div.messageContainer
+          h5.messageTitle #{message.title}
+          p.message #{message.message}
+          hr
+          p.note Note: You have to join the club to see whom this message is written by and when.
         
 

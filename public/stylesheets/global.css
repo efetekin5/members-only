@@ -198,13 +198,14 @@
   outline: none;
 }
 
-.gridContainer {
+.messagesHeaderContainer {
   width: 100%;
   background-color: #f8fafc;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
 }
 
 .newMessage {
@@ -223,12 +224,54 @@
   margin-left: auto;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
 .messagesHeader {
   font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.messagesContainer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3rem;
+}
+
+.messageContainer {
+  width: 80%;
+  border: 0.1rem solid #e2e8f0;
+  padding: 1.5rem;
+  box-shadow: 2px 3px  15px #d1d5db;
+}
+
+.messageTitle {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.message {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.note {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  margin-top: 1rem;
+}
+
+.writtenBy {
+  margin-top: 0.7rem;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.messageTime {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
 }

@@ -1,6 +1,7 @@
 const asyncHandler = require('express-async-handler');
 const {body, validationResult} = require('express-validator');
 const Message = require('../models/message');
+const User = require('../models/user');
 
 exports.createNewMessageGet = asyncHandler((req, res, next) => {
     res.render('message');
@@ -35,7 +36,7 @@ exports.createNewMessagePost = [
             const minutes = currentDate.getMinutes();
             const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
 
-            const finalDateFormat = `${formattedHours}:${formattedMinutes} ${formattedDate}`;
+            const finalDateFormat = `${formattedHours}:${formattedMinutes} - ${formattedDate}`;
 
             const newMessage = new Message({
                 title: title,
