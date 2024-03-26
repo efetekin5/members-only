@@ -4,4 +4,6 @@ const joinTheClubController = require('../controllers/joinTheClubController');
 
 router.get('/', joinTheClubController.joinTheClubGet);
 
+router.post('/', joinTheClubController.joinTheClubPost);
+
 module.exports = router;
