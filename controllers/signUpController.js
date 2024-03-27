@@ -54,6 +54,7 @@ exports.signUpPost = [
                     email: email,
                     password: hashedPassword,
                     membershipStatus: membershipStatus,
+                    admin: false,
                 })
 
                 try {

@@ -2,7 +2,8 @@ extends layout
 
 block content
     div.adminFormContainer
-        form.adminForm(method='post')
-            label.adminLabel(for='admin') Enter "admin" below to become an admin
-            input.adminInput(type='text' name='admin' required)
+        form(method='post').adminForm
+            label.adminLabel(for='adminCode') Enter "admin" below to become an admin
+            input.adminInput(type='text', name='adminCode', required)
+            p.adminErrorMessage #{errorMessage ? errorMessage : ''}
             button.adminSubmitButton(type='submit') Submit

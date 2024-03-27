@@ -4,6 +4,6 @@ block content
     div.joinTheClubContainer
         form(method='post').joinTheClubForm
             label.secretCodeLabel(for='secretCode') Enter the secret code to join the club
-            input.secretCodeInput(type='text', name='secretCode')
+            input.secretCodeInput(type='text', name='secretCode', required)
             h1.invalidSecretMsg #{errorMsg ? errorMsg : ''}
             button.secretCodeSubmitButton(type='submit') Submit

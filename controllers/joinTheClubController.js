@@ -11,9 +11,9 @@ exports.joinTheClubPost = [
         .notEmpty(),
 
     asyncHandler(async (req, res, next) => {
-        const errors = validationResult(req);
+        const error = validationResult(req);
 
-        if(!errors.isEmpty()) {
+        if(!error.isEmpty()) {
             res.render('joinTheClub', {
                 errorMsg: 'Invalid Secret Code',
             });

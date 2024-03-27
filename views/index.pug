@@ -20,7 +20,10 @@ block content
           h5.messageTitle #{message.title}
           p.message #{message.message}
           hr.divider
-          p.writtenBy
-            span(style='color: #6b7280') by 
-            | #{message.user.username}
-          p.messageTime #{message.timeStamp}
+          div.timeDateAndDelete
+            div.timeAndDate
+              p.writtenBy
+                span(style='color: #6b7280') by 
+                | #{message.user.username}
+              p.messageTime #{message.timeStamp}
+            button.deleteMessageButton Delete
