@@ -9,7 +9,7 @@ block content
         div.messageContainer
           h5.messageTitle #{message.title}
           p.message #{message.message}
-          hr
+          hr.divider
           p.note Note: You have to join the club to see whom this message is written by and when.
   else
     div.messagesHeaderContainer
@@ -19,10 +19,8 @@ block content
         div.messageContainer
           h5.messageTitle #{message.title}
           p.message #{message.message}
-          hr
+          hr.divider
           p.writtenBy
             span(style='color: #6b7280') by 
             | #{message.user.username}
           p.messageTime #{message.timeStamp}
-        
-

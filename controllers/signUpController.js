@@ -58,7 +58,7 @@ exports.signUpPost = [
 
                 try {
                     await newUser.save();
-                    res.redirect('/');
+                    res.redirect('/log-in');
                 }
                 catch(error) {
                     res.status(500).send('Error trying to save the new user', error)

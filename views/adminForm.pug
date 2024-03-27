@@ -1,0 +1,8 @@
+extends layout 
+
+block content
+    div.adminFormContainer
+        form.adminForm(method='post')
+            label.adminLabel(for='admin') Enter "admin" below to become an admin
+            input.adminInput(type='text' name='admin' required)
+            button.adminSubmitButton(type='submit') Submit

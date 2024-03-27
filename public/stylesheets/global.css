@@ -17,6 +17,7 @@
 .headerElements {
   display: flex;
   list-style: none;
+  column-gap: 1.2rem;
 }
 
 .logInElement {
@@ -40,15 +41,16 @@
 .headerLogIn {
   background-color: rgb(99 102 241);
   color: white;
-  margin-right: 2rem;
   padding: 0.8rem;
   font-size: 1.1rem;
+  font-weight: 500;
   font-family: "Poppins", sans-serif;
   border-radius: 0.5rem;
-  width: 7rem;
   border: 0;
   margin-top: 0.4rem;
   cursor: pointer;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .headerSignUp {
@@ -56,10 +58,12 @@
   color: white;
   margin-right: 3rem;
   padding: 0.8rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
   font-size: 1.1rem;
+  font-weight: 500;
   font-family: "Poppins", sans-serif;
   border-radius: 0.5rem;
-  width: 7rem;
   border: 0;
   margin-top: 0.4rem;
   cursor: pointer;
@@ -70,12 +74,11 @@
   color: white;
   margin-right: 3rem;
   padding: 0.8rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   font-family: "Poppins", sans-serif;
   border-radius: 0.5rem;
-  width: 6rem;
   border: 0;
-  margin-left: 1.5rem;
   cursor: pointer;
 }
 
@@ -179,10 +182,10 @@
   background-color: rgb(99 102 241);
   color: white;
   padding: 0.8rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: "Poppins", sans-serif;
   border-radius: 0.5rem;
-  width: 100%;
+  font-weight: 500;
   border: 0;
   margin-top: 3rem;
   cursor: pointer;
@@ -217,7 +220,8 @@
   background-color: rgb(99 102 241);
   color: white;
   padding: 0.8rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   font-family: "Poppins", sans-serif;
   border-radius: 0.5rem;
   width: 100%;
@@ -285,12 +289,11 @@
 .joinTheClub {
   background-color: rgb(99 102 241);
   color: white;
-  margin-right: 1.6rem;
   padding: 0.8rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   font-family: "Poppins", sans-serif;
   border-radius: 0.5rem;
-  width: 9rem;
   border: 0;
   cursor: pointer;
   margin-left: auto;
@@ -354,4 +357,73 @@
   color: red;
   margin-right: 1.5rem;
   margin-top: -0.5rem;
+}
+
+.divider {
+  border: 0.01rem solid #e2e8f0;
+}
+
+.adminButton {
+  background-color: rgb(99 102 241);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.adminElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminFormContainer {
+  width: 100%;
+  background-color: #f8fafc;
+  height: 84vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adminForm {
+  background-color: white;
+  row-gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid #e2e8f0;
+  padding: 3rem;
+  width: 40%;
+  align-items: center;
+}
+
+.adminLabel {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.adminInput {
+  height: 4rem;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  width: 100%;
+  padding: 0.3rem;
+  border: 0.1rem solid #cbd5e1;
+}
+
+.adminSubmitButton {
+  background-color: rgb(99 102 241);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  border: 0;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
