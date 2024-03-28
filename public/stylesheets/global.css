@@ -112,6 +112,7 @@
 .messageLabel {
   font-size: 1.4rem;
   font-family: "Poppins", sans-serif;
+  margin-bottom: -0.5rem;
 }
 
 .formSignUpButton,
@@ -136,6 +137,7 @@
   font-size: 1.4rem;
   font-family: "Poppins", sans-serif;
   outline: none;
+  margin-bottom: 0.3rem;
 }
 
 .messageInput {
@@ -452,4 +454,11 @@
   padding: 0.5rem;
   margin-top: 1.3rem;
   cursor: pointer;
+}
+
+.signUpErrorMessage {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: red;
+  margin-top: -1.1rem;
 }

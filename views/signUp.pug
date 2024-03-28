@@ -5,18 +5,30 @@ block content
     form(method='POST').form
       label.signUpLabel(for='username') Username
       input.signUpInput(id='username' type='text' name='username' minLength=1 required value=( username ? username : ''))
+      if errors
+        for error in errors 
+          if error.path === 'username'
+            p.signUpErrorMessage #{error.msg}
 
       label.signUpLabel(for='email') Email
       input.signUpInput(id='email' type='email' name='email' required value=( email ? email : ''))
+      if errors
+        for error in errors 
+          if error.path === 'email'
+            p.signUpErrorMessage #{error.msg}
 
       label.signUpLabel(for='password') Password
       input.signUpInput(id='password' type='password' name='password' minLength=2 required value=( password ? password : ''))
+      if errors
+        for error in errors 
+          if error.path === 'password'
+            p.signUpErrorMessage #{error.msg}
 
       label.signUpLabel(for='passwordConfirmation') Password Confirmation
       input.signUpInput(id='passwordConfirmation' type='password' name='passwordConfirmation' minLength=2 required  value=( passwordConfirmation ? passwordConfirmation : ''))
+      if errors
+        for error in errors 
+          if error.path === 'passwordConfirmation'
+            p.signUpErrorMessage #{error.msg}
 
       button.formSignUpButton(type='submit') Sign Up
-
-  if errors
-      for error in errors
-        p #{error.msg}

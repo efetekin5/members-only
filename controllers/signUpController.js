@@ -11,13 +11,15 @@ exports.signUpPost = [
     body('username')
         .trim()
         .isLength({min: 1})
+        .withMessage('Please enter minimum 1 character')
         .escape(),
     body('email')
         .trim()
         .isEmail()
         .withMessage('Please enter a valid email'),
     body('password')
-        .isLength({min: 2}),
+        .isLength({min: 2})
+        .withMessage('Please enter minimum 2 characters'),
     body('passwordConfirmation').custom((value, {req}) => {
         if(req.body.password != value) {
             throw new Error('Password confirmation does not match the password')
@@ -36,6 +38,7 @@ exports.signUpPost = [
         const membershipStatus = false;
 
         if(!errors.isEmpty()) {
+            console.log(errors)
             res.render('signUp', {
                 username: username,
                 email: email,
