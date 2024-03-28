@@ -432,14 +432,16 @@
   width: 100%;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  margin-top: 0.6rem;
 }
 
 .adminErrorMessage {
   font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: red;
-  margin-right: 1.5rem;
+  margin-right: 0.5rem;
   margin-top: -0.5rem;
+  font-weight: 500;
 }
 
 .timeDateAndDelete {

@@ -3,7 +3,12 @@ extends layout
 block content
     div.adminFormContainer
         form(method='post').adminForm
-            label.adminLabel(for='adminCode') Enter "admin" below to become an admin
+            if title === 'Enter secret code to become an admin'
+                label.adminLabel(for='adminCode') #{title}
+            else 
+                label.adminErrorMessage(for='adminCode') #{title}
             input.adminInput(type='text', name='adminCode', required)
-            p.adminErrorMessage #{errorMessage ? errorMessage : ''}
             button.adminSubmitButton(type='submit') Submit
+            p.secretCodeLink
+                | You could find the secret code
+                a.githubLink(href='https://github.com/efetekin5/members-only')  here
