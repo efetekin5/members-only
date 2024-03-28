@@ -6,4 +6,6 @@ router.get('/', messageController.createNewMessageGet);
 
 router.post('/', messageController.createNewMessagePost);
 
+router.get('/:id/delete', messageController.deleteMessageGet);
+
 module.exports = router;

@@ -446,10 +446,10 @@
   color: hsl(0 100% 14% / 1);
   background-color: hsl(0 91% 71% / 1);
   border: 0;
-  width: 10%;
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
   border-radius: 0.5rem;
   padding: 0.5rem;
   margin-top: 1.3rem;
+  cursor: pointer;
 }

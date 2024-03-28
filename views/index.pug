@@ -26,4 +26,5 @@ block content
                 span(style='color: #6b7280') by 
                 | #{message.user.username}
               p.messageTime #{message.timeStamp}
-            button.deleteMessageButton Delete
+            a(href=`/message/${message.id}/delete`)
+              button.deleteMessageButton Delete
