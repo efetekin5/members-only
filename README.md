@@ -1,1 +1,1 @@
-# members-only
+The secret code for joining the club: members only

@@ -5,5 +5,8 @@ block content
         form(method='post').joinTheClubForm
             label.secretCodeLabel(for='secretCode') Enter the secret code to join the club
             input.secretCodeInput(type='text', name='secretCode', required)
-            h1.invalidSecretMsg #{errorMsg ? errorMsg : ''}
+            h1.invalidSecretMsg #{errorMessage ? errorMessage : ''}
             button.secretCodeSubmitButton(type='submit') Submit
+            p.secretCodeLink
+                | You could find the secret code
+                a.githubLink(href='https://github.com/efetekin5/members-only')  here

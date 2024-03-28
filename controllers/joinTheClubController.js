@@ -15,15 +15,19 @@ exports.joinTheClubPost = [
 
         if(!error.isEmpty()) {
             res.render('joinTheClub', {
-                errorMsg: 'Invalid Secret Code',
+                errorMessage: 'Invalid Secret Code',
             });
         } else {
-            if(req.body.secretCode === 'the odin project') {
+            if(req.body.secretCode === 'members only') {
                 const currentUser = await User.findOne({_id: req.user.id}).exec();
                 currentUser.membershipStatus = true;
 
                 await currentUser.save();
                 res.redirect('/');
+            } else {
+                res.render('joinTheClub', {
+                    errorMessage: 'Invalid Secret Code',
+                })
             }
         }
     })
