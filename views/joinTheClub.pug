@@ -3,9 +3,11 @@ extends layout
 block content 
     div.joinTheClubContainer
         form(method='post').joinTheClubForm
-            label.secretCodeLabel(for='secretCode') Enter the secret code to join the club
+            if title === 'Enter the secret code to join the club'
+                label.secretCodeLabel(for='secretCode') #{title}
+            else 
+                label.invalidSecretMsg(for='secretCode') #{title}
             input.secretCodeInput(type='text', name='secretCode', required)
-            h1.invalidSecretMsg #{errorMessage ? errorMessage : ''}
             button.secretCodeSubmitButton(type='submit') Submit
             p.secretCodeLink
                 | You could find the secret code

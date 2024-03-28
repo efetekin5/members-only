@@ -352,14 +352,17 @@
   border-radius: 0.5rem;
   width: 100%;
   padding: 0.3rem;
+  margin-top: 1rem;
 }
 
 .invalidSecretMsg {
   font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 500;
   color: red;
   margin-right: 1rem;
-  margin-top: -0.5rem;
+  margin-bottom: -0.8rem;
+  margin-left: 0.5rem;
 }
 
 .divider {

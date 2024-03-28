@@ -3,7 +3,9 @@ const {body, validationResult} = require('express-validator');
 const User = require('../models/user');
 
 exports.joinTheClubGet = (req, res, next) => {
-    res.render('joinTheClub');
+    res.render('joinTheClub', {
+        title: 'Enter the secret code to join the club'
+    });
 }
 
 exports.joinTheClubPost = [
@@ -26,7 +28,7 @@ exports.joinTheClubPost = [
                 res.redirect('/');
             } else {
                 res.render('joinTheClub', {
-                    errorMessage: 'Invalid Secret Code',
+                    title: 'Invalid Secret Code',
                 })
             }
         }
