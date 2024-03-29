@@ -12,15 +12,14 @@
   padding-left: 5rem;
   padding-right: 5rem;
   border: 0.1rem solid #e2e8f0;
+  display: flex;
 }
 
-.headerElements {
+.headerElements2,
+.headerElements4 {
   display: flex;
   list-style: none;
   column-gap: 1.2rem;
-}
-
-.logInElement {
   margin-left: auto;
 }
 
@@ -102,15 +101,15 @@
   display: flex;
   flex-direction: column;
   border: 0.1rem solid #e2e8f0;
-  padding: 2.7rem;
+  padding: 1.8rem;
   row-gap: 1rem;
-  width: 30%;
+  width: 40%;
   background-color: white;
 }
 
 .signUpLabel,
 .messageLabel {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
   margin-bottom: -0.5rem;
 }
@@ -134,7 +133,7 @@
   padding: 0.4rem;
   border-radius: 0.5rem;
   border: 0.1rem solid #cbd5e1;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
   outline: none;
   margin-bottom: 0.3rem;
@@ -176,7 +175,7 @@
   padding-left: 3rem;
   padding-right: 3rem;
   padding-bottom: 3rem;
-  width: 35%;
+  width: 40%;
   background-color: white;
 }
 
@@ -263,12 +262,14 @@
 .messageTitle {
   font-size: 2rem;
   font-family: "Poppins", sans-serif;
+  overflow-wrap: break-word;
 }
 
 .message {
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   margin-bottom: 1rem;
+  overflow-wrap: break-word;
 }
 
 .note {
@@ -313,23 +314,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .joinTheClubForm {
   border: 0.1rem solid #e2e8f0;
   display: flex;
   flex-direction: column;
-  padding: 3rem;
+  padding: 2rem;
   row-gap: 2rem;
   background-color: white;
   justify-content: center;
   align-items: center;
+  width: 50%;
+  padding-top: 1.8rem;
+  margin-top: 1rem;
+  min-height: 10rem;
+  margin-right: 3rem;
 }
 
 .secretCodeLabel {
   font-family: "Poppins", sans-serif;
-  font-size: 2rem;
+  font-size: 150%;
   font-weight: 500;
 }
 
@@ -341,6 +346,7 @@
   outline: none;
   padding: 0.5rem;
   margin-bottom: -1rem;
+  width: 100%;
 }
 
 .secretCodeSubmitButton {
@@ -409,7 +415,7 @@
 
 .adminLabel {
   font-family: "Poppins", sans-serif;
-  font-size: 2rem;
+  font-size: 150%;
   font-weight: 500;
 }
 
@@ -478,4 +484,57 @@
   text-decoration: none;
   color: rgb(99 102 241);
   font-weight: 500;
+}
+
+@media(max-width: 1143px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem;
+  }
+
+  .headerElements2 {
+    margin-left: 2.8rem;
+    margin-top: 1rem;
+  }
+
+  .headerElements4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 2rem;
+    row-gap: 0.6rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .form,
+  .newMessageForm {
+    width: 70%;
+  }
+
+  .logInForm {
+    width: 70%;
+  }
+
+  .joinTheClubForm {
+    width: 70%;
+    margin: 1rem;
+  }
+
+  .adminForm {
+    width: 70%;
+    row-gap: 1rem;
+    padding: 2rem;
+  }
+
+  .logOut {
+    margin-right: 0rem;
+    width: 118%;
+  }
+
+  .newMessage {
+    width: 99%;
+    margin-right: 0.9rem;
+  }
 }

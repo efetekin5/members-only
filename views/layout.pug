@@ -4,38 +4,34 @@ html(lang='en')
     title= title
     link(rel='stylesheet', href='/stylesheets/global.css')
   body
-    nav.header 
-        ul.headerElements
-          if currentUser 
-            li
-              a.membersOnly(href='/')
-                  span.members Members
-                  span.only Only
-            li.newMessageElement
-              a(href='/message')
-                button.newMessage New Message
-            if(currentUser.membershipStatus === false)
-              li.joinTheClubElement
-                a(href='/join-the-club')
-                  button.joinTheClub Join The Club
-            if(currentUser.admin === false)
-              li.adminElement 
-                a(href='/admin')
-                  button.adminButton Become Admin
-            li.logOutElement
-                a(href='/log-out')
-                  button.logOut Log Out
-          else
-            li 
-              a.membersOnly(href='/')
-                  span.members Members
-                  span.only Only
-            li.logInElement 
-              a(href='/log-in')
-                button.headerLogIn Log In 
-            li 
-              a(href='/sign-up')
-                button.headerSignUp Sign Up
-            
+    nav.header
+      a.membersOnly(href='/')
+                span.members Members
+                span.only Only
 
+      if currentUser
+        ul.headerElements4
+          li.newMessageElement
+            a(href='/message')
+              button.newMessage New Message
+          if(currentUser.membershipStatus === false)
+            li.joinTheClubElement
+              a(href='/join-the-club')
+                button.joinTheClub Join Club
+          if(currentUser.admin === false)
+            li.adminElement 
+              a(href='/admin')
+                button.adminButton Become Admin
+          li.logOutElement
+              a(href='/log-out')
+                button.logOut Log Out
+      else
+        ul.headerElements2
+          li.logInElement 
+            a(href='/log-in')
+              button.headerLogIn Log In 
+          li.signUpElement
+            a(href='/sign-up')
+              button.headerSignUp Sign Up
+            
     block content
