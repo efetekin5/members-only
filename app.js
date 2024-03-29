@@ -7,6 +7,8 @@ const MongoStore = require('connect-mongo');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const compression = require('compression');
+const helmet = require('helmet')
 
 const indexRouter = require('./routes/index');
 const signUpRouter = require('./routes/signUp');
@@ -32,6 +34,15 @@ async function main() {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+const RateLimit = require("express-rate-limit");
+const limiter = RateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 20,
+});
+
+app.use(compression());
+app.use(helmet());
+app.use(limiter);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
